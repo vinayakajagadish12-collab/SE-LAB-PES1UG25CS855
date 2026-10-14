@@ -22,11 +22,10 @@ The new dependency is defusedxml. The demo does not contact the payment gateway.
 ## Submission
 
 Git history contains one baseline commit and three fix commits grouped as
-Bandit, Pylint/behavior, and Flake8/documentation. Nothing is pushed to GitHub.
+Bandit, Pylint/behavior, and Flake8/documentation.
 
-Read issues.md. reflection.md contains preparation notes only: the supplied
-handout omits the exact questions. Get those questions and complete your
-reflection answers before submission.
+Read issues.md for the documented fixes. Reflection is not required, as
+confirmed by the instructor.
 
 The payment gateway is an example URL and has not been tested live.
 All dates use the same local timezone, as in the original lab.
