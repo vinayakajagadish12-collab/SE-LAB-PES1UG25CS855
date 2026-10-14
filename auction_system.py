@@ -40,7 +40,7 @@ class Auction:
         return self.bids[-1][0] if self.bids else None
 
     def place_bid(self, bidder, amount, at):
-        """Accept valid bids before closing; reject invalid amounts or bidders."""
+        """Accept valid bids before closing; reject invalid bids."""
         bid_time = datetime.strptime(at, TIME_FORMAT)
         if bid_time >= self.ends_at:
             raise ValueError("Auction closed")
@@ -87,7 +87,9 @@ def bid(item_id, bidder, amount, at):
 
 def top_bidders(item_id, n=3):
     """Return up to n distinct bidders ranked by their highest bids."""
-    ordered = sorted(auctions[item_id].bids, key=lambda row: row[1], reverse=True)
+    ordered = sorted(
+        auctions[item_id].bids, key=lambda row: row[1], reverse=True
+    )
     names = []
     for bidder, _, _ in ordered:
         if bidder not in names:

@@ -20,3 +20,16 @@ Tool findings come from reports/before; manual findings are labeled separately.
 | Charging state | Manual / logic | 72-75 | Payment before closing or without a winner. | Validate both before the gateway call. |
 | Import side effects | Manual | 107 | Import runs the demo. | Add a main guard. |
 | Negative remaining time | Manual | 83-86 | Expired auctions return negative time. | Clamp remaining seconds to zero. |
+| E501 / E302 / E305 and C0301 | Flake8 / Pylint style | See original reports | Long lines and missing blank lines. | Wrap expressions and demo calls; use standard blank-line spacing. |
+
+## Assumptions and limits
+
+- All timestamps use the same local timezone and supplied minute format.
+- A first positive bid may be below reserve; only a reserve-meeting bid qualifies to win.
+- The closing instant is exclusive for new bids.
+- winner() reports the reserve-qualified leader; charge_winner() also requires closing.
+- The buyer premium remains 5%; money is rounded to two decimal places.
+- MixedCase helper names were renamed and all internal calls updated.
+- The example payment endpoint is not contacted. Payment tests use a mock.
+- defusedxml is required. The XML fix follows https://github.com/tiran/defusedxml
+  and Bandit's B411 guidance.
