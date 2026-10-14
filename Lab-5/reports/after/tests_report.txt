@@ -1,0 +1,14 @@
+test_dates (test_auction_system.AuctionTests.test_dates) ... ok
+test_expired_time (test_auction_system.AuctionTests.test_expired_time) ... ok
+test_exports_and_ranking (test_auction_system.AuctionTests.test_exports_and_ranking) ... ok
+test_html (test_auction_system.AuctionTests.test_html) ... ok
+test_increments (test_auction_system.AuctionTests.test_increments) ... ok
+test_invalid_amounts_and_seller (test_auction_system.AuctionTests.test_invalid_amounts_and_seller) ... ok
+test_payment_guards_and_mocked_success (test_auction_system.AuctionTests.test_payment_guards_and_mocked_success) ... ok
+test_reserve_and_price (test_auction_system.AuctionTests.test_reserve_and_price) ... ok
+test_xml_entities_rejected (test_auction_system.AuctionTests.test_xml_entities_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.005s
+
+OK
